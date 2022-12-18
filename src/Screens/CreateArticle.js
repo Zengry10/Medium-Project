@@ -4,14 +4,11 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function CreationArticle(){
-
     const { token, setToken } = useContext(StoreContext)
     const { register, handleSubmit, formState: {errors } } = useForm()
-
     let navigate = useNavigate()
 
     function CreateArticle(data){
-        
             fetch('http://edu.project.etherial.fr/articles', {
                 method: 'POST',
                 headers: { 'Content-Type' : 'application/json',
@@ -35,7 +32,6 @@ export default function CreationArticle(){
                     }
                 })
             })
-
     }
     return(
         <div class="h-screen bg-gray-600 flex justify-center items-center">

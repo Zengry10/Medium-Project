@@ -12,14 +12,13 @@ import Map from './Screens/Map'
 
 
 function App() {
- 
-
-  let [article, setArticle] = useState(null)
+  
   return (
     <div id="bodyy" className="App  m-0  ">
       <StoreProvider>
         <BrowserRouter>
-        <Header/>       
+        <Header/>
+        <Map/>  
 
          
           <Routes>

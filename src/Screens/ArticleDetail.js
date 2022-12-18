@@ -3,16 +3,13 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
 export default function ArticleDetail() {
-
     let location = useLocation()
     let navigate = useNavigate()
     let [article, setArticle] = useState(null)
     const params = useParams();
     console.log(location.state.article)
 
-
     useEffect(() => {
-
         if (location && location.state && location.state.article) {
             setArticle(location.state.article)
         } else {

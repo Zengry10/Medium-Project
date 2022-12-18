@@ -4,10 +4,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
 export default function Register( {closeModalRegister, closeModalLogin }, props) {
-
     const { register, handleSubmit, formState: {errors } } = useForm()
-
-    const navigate = useNavigate();
 
     function onSubmit(data) {
         fetch('http://edu.project.etherial.fr/users', {
@@ -95,7 +92,7 @@ export default function Register( {closeModalRegister, closeModalLogin }, props)
                     </div>
                     <div className="text-grey-dark mt-6">
                     Already have an account? 
-                    <a className="no-underline border-b border-blue text-blue hover:text-zinc-600" href="../login/">
+                    <a className="no-underline border-b border-blue text-blue hover:text-zinc-600" href="#">
                         Log in
                     </a>.
                 </div>
